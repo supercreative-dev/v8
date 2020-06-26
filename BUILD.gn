@@ -294,6 +294,11 @@ config("internal_config") {
   if (is_component_build) {
     defines += [ "BUILDING_V8_SHARED" ]
   }
+  else {
+	#Choi Hojun 	
+	#aly windows 에서는 항상 함수가  export형태여야해서 
+    defines += [ "BUILDING_V8_SHARED" ]
+  }
 }
 
 # This config should be applied to code using the libplatform.
